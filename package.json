@@ -49,6 +49,7 @@
 		"@types/react": "18.2.48",
 		"@types/react-dom": "18.2.18",
 		"encoding": "^0.1.13",
+		"eslint-config-next": "^15.0.1",
 		"eslint-plugin-jest-dom": "^5.4.0",
 		"eslint-plugin-testing-library": "^6.3.0",
 		"gulp": "^5.0.0",
