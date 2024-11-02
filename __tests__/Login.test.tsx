@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { ButtonProvider } from '@/app/product/components/clickedButton';
-import { LoginForm } from '@/app/auth/components/forms/log_in';
+import { LoginForm } from '@/app/auth/forms/log_in';
 import { useRouter } from 'next/navigation';
 
 // Mocking the useRouter

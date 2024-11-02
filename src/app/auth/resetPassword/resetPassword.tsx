@@ -21,7 +21,7 @@ export function ResetPassword() {
 		setShowConfirmPassword((showConfirmPassword = !showConfirmPassword));
 	}
 	return (
-		<form action="/auth/components/routes/resetPassword" method="post">
+		<form action="/auth/backend/routes/resetPassword" method="post">
 			<Card className="mx-auto max-w-sm">
 				<CardHeader>
 					<CardTitle className="text-xl">Reset Password</CardTitle>

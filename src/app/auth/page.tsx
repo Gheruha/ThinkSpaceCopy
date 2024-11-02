@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect } from 'react';
-import { LoginForm } from './components/forms/log_in';
-import { SignUpForm } from './components/forms/sign_up';
+import { LoginForm } from './forms/log_in';
+import { SignUpForm } from './forms/sign_up';
 import { useButtonContext } from '@/app/product/components/clickedButton';
 import { useToast } from '@/components/ui/use-toast';
 

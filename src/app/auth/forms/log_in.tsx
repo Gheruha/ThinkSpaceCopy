@@ -63,7 +63,7 @@ export function LoginForm() {
 
 			try {
 				// Send the email to the backend handler to generate OTP
-				const response = await fetch('/auth/components/routes/resetPassword', {
+				const response = await fetch('/auth/backend/routes/resetPassword', {
 					method: 'POST',
 					body: new URLSearchParams({ email })
 				});
@@ -85,7 +85,7 @@ export function LoginForm() {
 
 	return (
 		<Form {...form}>
-			<form action="/auth/components/routes/login" method="post">
+			<form action="/auth/backend/routes/login" method="post">
 				<Card className="mx-auto max-w-sm">
 					<CardHeader>
 						<CardTitle className="text-xl">Login</CardTitle>

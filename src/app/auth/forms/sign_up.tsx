@@ -10,7 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { useToast } from '@/components/ui/use-toast';
 import { Eye, EyeOff } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { useBlurContext } from '../blur';
+import { useBlurContext } from '../components/blur';
 
 export function SignUpForm() {
 	const { toast } = useToast();
@@ -66,7 +66,7 @@ export function SignUpForm() {
 
 	return (
 		<form
-			action="/auth/components/routes/signup"
+			action="/auth/backend/routes/signup"
 			method="post"
 			className={isBlur ? 'blur-lg pointer-events-none' : ''}
 		>
