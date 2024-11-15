@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { Ellipsis } from 'lucide-react';
-import { ChevronsLeft, ChevronsRight } from 'lucide-react';
+import { ChevronsLeft, ChevronsRight, SquareCheckBig } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function WorkspaceLayout({ children }: { children: React.ReactNode }) {
 	const [isMenuOpen, setIsMenuOpen] = useState<boolean>(true);
@@ -97,7 +98,7 @@ export default function WorkspaceLayout({ children }: { children: React.ReactNod
 				<div className="absolute top-0 left-0 bottom-0 w-0 overflow-visible z-[9] pointer-events-none">
 					<div
 						id="menu-side-workspace"
-						className={`relative w-[240px] transition-[width,opacity,transform] duration-200 ease-in-out bg-slate-800 rounded-r-lg ${isMenuOpen ? 'h-full' : 'h-auto transform translate-y-[59px] translate-z-[0px]'}`}
+						className={`relative w-[240px] transition-[width,opacity,transform] duration-200 ease-in-out bg-secondary dark:bg-slate-900 rounded-r-lg ${isMenuOpen ? 'h-full' : 'h-auto transform translate-y-[59px] translate-z-[0px]'}`}
 					>
 						<div
 							className={`overflow-hidden relative ${isMenuOpen ? 'h-full max-h-full' : 'h-auto max-h-[calc(-118px+100vh)]'}`}
@@ -116,13 +117,9 @@ export default function WorkspaceLayout({ children }: { children: React.ReactNod
 									</Button>
 								</div>
 								<div className="py-4 px-4">
-									<div className="flex flex-col h-[80vh] justify-around items-center">
-										<p className="text-3xl border text-blue-900 border-blue-800 rounded-xl px-2 dark:text-blue-400 dark:border-blue-400 whitespace-nowrap">
-											Coming soon
-										</p>
-										<p className="text-3xl border text-blue-900 border-blue-800 rounded-xl px-2 dark:text-blue-400 dark:border-blue-400 whitespace-nowrap">
-											Coming soon
-										</p>
+									<div className="flex h-[80vh] space-x-2">
+										<SquareCheckBig />
+										<Link href="/workspace/todo">Todo</Link>
 									</div>
 								</div>
 							</div>
