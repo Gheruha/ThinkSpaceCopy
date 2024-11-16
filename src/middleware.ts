@@ -1,9 +1,9 @@
-import { createMiddlewareClient } from '@supabase/auth-helpers-nextjs';
 import { NextRequest, NextResponse } from 'next/server';
+import { getMiddlewareSupabaseClient } from './lib/supabaseClients';
 
 export async function middleware(req: NextRequest) {
 	const res = NextResponse.next();
-	const supabase = createMiddlewareClient({ req, res });
+	const supabase = getMiddlewareSupabaseClient(req, res);
 
 	const {
 		data: { session },
@@ -21,8 +21,7 @@ export async function middleware(req: NextRequest) {
 	if (
 		pathname.startsWith('/product') ||
 		pathname.startsWith('/auth') ||
-		pathname.startsWith('/pricing') ||
-		pathname.startsWith('/testing')
+		pathname.startsWith('/pricing')
 	) {
 		return res;
 	}
